@@ -1,10 +1,15 @@
 from fastapi import FastAPI
+from pydantic import BaseModel
+from app.adapters.download_yt import download
+
+class linkAutorized(BaseModel):
+    link:str
+
+def get_link(app:FastAPI):
 
 
-def get_link(app):
-
-    app = FastAPI()
-
-    @app.get("/")
-    def root():
-        return "hola mundo"
+    @app.post("/api/obtener-link")
+    def obtener_link(link:linkAutorized):
+        print(link.link)
+        download(link.link)
+        
