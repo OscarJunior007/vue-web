@@ -1,8 +1,8 @@
 <template>
-  <div class="home">
-    <homeSite>
+  <div>    
 
-    </homeSite>
+    <homeSite></homeSite>
+
   </div>
 </template>
 
@@ -11,10 +11,12 @@
 
 import homeSite from '@/components/homeSite.vue';
 
+
 export default {
   name: 'HomeView',
   components: {
-    homeSite
+    homeSite,
+
   },
 
 

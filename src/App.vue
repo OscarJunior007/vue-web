@@ -1,11 +1,26 @@
 <template>
   <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <!-- <router-link to="/">Home</router-link> |
+    <router-link to="/about"></router-link> -->
+    <menuSite></menuSite>
   </nav>
   <router-view/>
 </template>
+<script>
+// @ is an alias to /src
 
+
+import menuSite from '@/components/menuSite.vue';
+
+export default {
+  name: 'App',
+  components: {
+    menuSite
+  },
+
+
+}
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -15,9 +30,7 @@
   color: #2c3e50;
 }
 
-nav {
-  padding: 30px;
-}
+
 
 nav a {
   font-weight: bold;
